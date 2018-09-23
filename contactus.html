@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="bootstrap-folder/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+<header>
+<title>Contact Us</title>
+<style>
+label 
+{
+	font-weight: bold;
+}
+</style>
+<p align="left">This site is best used with JavaScript enabled</p>
+<h1 align="center">Dre's Cuisine</h1>
+</header>
+<script type="text/javascript">
+	function validateItems()
+	{
+		var name = document.forms["contactForm"]["name"].value;
+		var email = document.forms["contactForm"]["email"].value;
+		var phone = document.forms["contactForm"]["phone"].value;
+		var info = document.forms["contactForm"]["info"].value;
+		
+		if (name === "") 
+		{
+			alert("Name field must be filled in.");
+ 			document.forms["contactForm"]["name"].focus();
+			return false;
+		}
+		
+		else if (email === "") 
+		{
+			alert("Email field must be filled in.");
+ 			document.forms["contactForm"]["email"].focus();
+			return false;
+		}
+		else if (phone === "") 
+		{
+			alert("Phone field must be filled in.");
+ 			document.forms["contactForm"]["phone"].focus();
+			return false;
+		}
+		else if (info === "") 
+		{
+			alert("Additional Information field must be filled in.");
+ 			document.forms["contactForm"]["info"].focus();
+			return false;
+		}
+		else
+		{
+		alert("Form completed");
+		}
+		
+
+
+	}
+</script>
+
+</head>
+<body>
+<hr />
+<nav>
+<p>
+<a class="btn badge-pill" href="home.html" ><i class="fa fa-home fa-2x"></i></a>&emsp;
+<a class="btn badge-pill" href="menu.html">Menu</a>&emsp;
+<a class="btn badge-pill" href="contactus.html">Contact Us</a>
+</p>
+</nav>
+<hr />
+<body>
+<!-- <form action="request.html" method="POST"> -->
+<br />
+<div align="center">
+<form name="contactForm" onsubmit="return validateItems();">
+<label for="name">Name: </label> 
+<input type="text" id="name" name="name"> <br /><br />
+
+<label for="email">Email: </label> 
+<input type="text" id="email" name="email"> <br /><br />
+
+<label for="phone">Phone: </label> 
+<input type="text" id="phone" name="phone"> <br /><br />
+
+<label for="reason">Reason for Inquiry: </label>
+<select id="reason" name="reason">
+<option value="default" selected>Catering</option>
+<option value="private">Private Party</option>
+<option value="feedback">Feedback</option>
+<option value="other">Other</option>
+</select>
+<br />
+<br />
+
+<label for="info">Additional Information: </label>
+<textarea id="info" name="info"></textarea><br />
+
+<label for="question">Have you been to the restaurant?</label>
+<input type="radio" id="choice1" name="questionnaire" value="no">
+<label for="choice1">No</label>
+<input type="radio" id="choice2" name="questionnaire" value="yes">
+<label for="choice2">Yes</label><br />
+
+<label>Best days to contact you: </label>&emsp;
+<input type="checkbox" id="monday" name="interest" value="monday">
+<label for="monday">M</label>&emsp;
+<input type="checkbox" id="tuesday" name="interest" value="tuesday">
+<label for="tuesday">T</label>&emsp;
+<input type="checkbox" id="wednesday" name="interest" value="wednesday">
+<label for="wednesday">W</label>&emsp;
+<input type="checkbox" id="wednesday" name="interest" value="wednesday">
+<label for="wednesday">W</label>&emsp;
+<input type="checkbox" id="thursday" name="interest" value="thursday">
+<label for="thursday">Th</label>&emsp;
+<input type="checkbox" id="friday" name="interest" value="friday">
+<label for="friday">F</label><br />
+<br />
+<!-- <input type="submit" name="request" value="Send Request"> -->
+ <button type="submit" id="submitButton" class="btn btn-default">Send Request</button>
+
+</form>
+<hr />
+</div>
+
+<footer>
+<div align="center">
+<p>123 Main St, Charlotte, North Carolina 28216<br />
+555-123-4567</p>
+</div>
+</footer>
+
+</body>
+</html>
